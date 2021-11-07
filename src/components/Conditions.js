@@ -3,10 +3,12 @@ import React from "react";
 import Header from './Header';
 import Button from './Button';
 
-function Conditions({ lecture, jeVeuxLire }) {
+function Conditions({ lecture, jeVeuxLire, participe, sayYes }) {
 
     return (<>
-        <Header />
+        <Header 
+            dontgoback={participe}
+            sayYes={sayYes}/>
         <div>
             <p className="App-txt">
 

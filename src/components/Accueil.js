@@ -6,7 +6,9 @@ import Button from './Button';
 function Accueil({ participe, sayYes, }) {
 
     return (<>
-        <Header />
+        <Header 
+            dontgoback={participe}
+            sayYes={sayYes}/>
         <div className="App-intro">
             <p className="App-title">Bienvenue !</p>
             <p className="App-subtitle">Ici, vous pouvez vous inscrire pour participer aux célébrations de Noël de Whoville.</p>

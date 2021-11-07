@@ -4,7 +4,7 @@ import Header from './Header';
 import Button from './Button';
 import Checkbox from './CheckBox';
   
-function Inscription({ done, itsDone, lecture, jeVeuxLire, text }) {
+function Inscription({ done, itsDone, lecture, jeVeuxLire, text, participe, sayYes }) {
 
     const [data, setData] = useState({
         name: "",
@@ -52,7 +52,9 @@ function Inscription({ done, itsDone, lecture, jeVeuxLire, text }) {
     const handleSubmit = async e => (checkSubmit() ? sendData(e) : itsDone(false))
 
     return (<>
-        <Header />
+        <Header 
+            dontgoback={participe}
+            sayYes={sayYes}/>
         <div className="App-intro">
                 <p className="App-subtitle">Veuillez compléter le formulaire.</p>      
         

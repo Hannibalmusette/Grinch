@@ -6,7 +6,9 @@ import Button from './Button';
 function Byebye({ participe, sayYes, done, itsDone, text }) {
 
     return (<>
-        <Header />
+        <Header 
+            dontgoback={participe}
+            sayYes={sayYes}/>
         <div>
             <p className="App-intro">Ton inscription a été validée !<br /><br />
             Félicitations et scrute bien ta boîte mail pour connaître le nom de la personne à qui tu devras offrir un cadeau !

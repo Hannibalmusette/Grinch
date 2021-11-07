@@ -24,6 +24,7 @@ function App() {
       return (
         <div className="App">
           <Inscription
+            participe={participe} sayYes={sayYes}
             done={done} itsDone={itsDone}
             lecture={lecture} jeVeuxLire={jeVeuxLire}
           />
@@ -33,6 +34,7 @@ function App() {
       return (
         <div className="App">
           <Conditions
+            participe={participe} sayYes={sayYes}
             lecture={lecture} jeVeuxLire={jeVeuxLire}
           />
         </div>
