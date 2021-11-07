@@ -9,7 +9,7 @@ function Accueil({ participe, sayYes, }) {
         <Header />
         <div className="App-intro">
             <p className="App-title">Bienvenue !</p>
-            <p className="App-title">Ici, vous pouvez vous inscrire pour participer aux célébrations de Noël de Whoville.</p>
+            <p className="App-subtitle">Ici, vous pouvez vous inscrire pour participer aux célébrations de Noël de Whoville.</p>
         </div>
         <br />
         <Button
