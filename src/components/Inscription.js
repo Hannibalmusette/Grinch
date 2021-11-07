@@ -11,32 +11,25 @@ function Inscription({ done, itsDone, lecture, jeVeuxLire, text }) {
         email: "",
         lettre: "",
       })
-    const { name, email, lettre } = data
     const handleChange = e =>
         setData({ ...data, [e.target.name]: e.target.value })
     const validEmail = new RegExp('^[a-zA-Z0-9._:$!%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]$')
     const [accept, Accept] = useState(false)
-    const [message, writeMessage] = useState({
-        messagename: "",
-        messsageemail: "",
-        messagelettre: "",
-    })
-    const { messagename, messageemail, messageaccept } = message
-    const [dataok, dataIsOk] = useState(false)
+    const [messname, writeMN] = useState("")
+    const [messemail, writeME] = useState("")
+    const [messaccept, writeMA] = useState("")
 
     const checkSubmit = () => {
-        name !== ""
-            ? writeMessage({...message, messagename: ""})
-            : writeMessage({...message, messagename: "Veuillez entrer un nom"})
-        email !== "" && (validEmail.test(email))
-            ? writeMessage({...message, messageemail: ""})
-            : writeMessage({...message, messageemail: "Veuillez entrer une adresse e-mail valide."})
-        accept
-            ? writeMessage({...message, messageaccept: ""})
-            : writeMessage({...message, messageaccept: "Veuillez accepter les conditions de participation."})
-        name !== "" && (validEmail.test(email)) && accept
-            ? dataIsOk(true)
-            : dataIsOk(false)
+        data.name === ""
+            ? writeMN("Veuillez entrer un nom.")
+            : writeMN("")
+        data.email === "" || !(validEmail.test(data.email))
+            ? writeME("Veuillez entrer une adresse e-mail valide.")
+            : writeME("")
+        !accept
+            ? writeMA("Veuillez accepter les conditions de participation.")
+            : writeMA("")
+        let dataok = (data.name !== "" && (validEmail.test(data.email)) && accept) ? true : false;
         return dataok
     }
 
@@ -48,11 +41,12 @@ function Inscription({ done, itsDone, lecture, jeVeuxLire, text }) {
             headers: {
               "Content-Type": "application/json",
             },
-            body: JSON.stringify([[name, email, lettre]]),
+            body: JSON.stringify([[data.name, data.email, data.lettre]]),
           })
         } catch (err) {
           console.log(err)
         }
+        itsDone(true)
       }
 
     const handleSubmit = async e => (checkSubmit() ? sendData(e) : itsDone(false))
@@ -68,7 +62,7 @@ function Inscription({ done, itsDone, lecture, jeVeuxLire, text }) {
                     className="form"
                     type="text"
                     name="name"
-                    value={name}
+                    value={data.name}
                     onChange={handleChange}
                 />
             </label></div>
@@ -78,7 +72,7 @@ function Inscription({ done, itsDone, lecture, jeVeuxLire, text }) {
                     className="form"
                     type="text"
                     name="email"
-                    value={email}
+                    value={data.email}
                     onChange={handleChange} />
             </label></div>
             <br />
@@ -87,7 +81,7 @@ function Inscription({ done, itsDone, lecture, jeVeuxLire, text }) {
                     className="form"
                     type="text"
                     name="lettre"
-                    value={lettre}
+                    value={data.lettre}
                     onChange={handleChange}/>
             </label></div>
             <br />
@@ -101,9 +95,9 @@ function Inscription({ done, itsDone, lecture, jeVeuxLire, text }) {
             </button>.
         </div>
         <div className="App-greentxt">
-                <p>{messagename}</p>
-                <p>{messageemail}</p>
-                <p>{messageaccept}</p>
+                <p>{messname}</p>
+                <p>{messemail}</p>
+                <p>{messaccept}</p>
         </div>
         <Button
             txt="Valider"
