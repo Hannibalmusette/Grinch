@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 35vmin;
   pointer-events: none;
 }
 
@@ -14,18 +14,109 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #135527;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: calc(10px);
+  color: red;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #fbbd61;
+}
+
+.App-title {
+  font-size: calc(50px);
+  color: #135527;
+  text-align: center;
+  margin-top: calc(30px);
+  margin-bottom: calc(10px);
+}
+
+.App-subtitle {
+  font-size: calc(30px);
+  color: #135527;
+  text-align: center;
+  margin-top: calc(30px);
+  margin-bottom: calc(10px);
+}
+
+.App-subsubtitle {
+  font-size: calc(20px);
+  color: #135527;
+  text-align: left;
+  margin-left: calc(20px);
+  margin-top: calc(30px);
+  margin-bottom: calc(10px);
+}
+
+.App-txt {
+  font-size: calc(15px);
+  color:black;
+  text-align: justify;
+  margin: calc(50px);
+  margin-top: calc(30px);
+  margin-bottom: calc(10px);
+}
+
+.App-greentxt {
+  font-size: calc(15px);
+  color:#135527;
+  text-align: center;
+  margin: calc(50px);
+  margin-top: calc(30px);
+  margin-bottom: calc(10px);
+}
+
+.btn {
+  font-family: 'Ubuntu', sans-serif;
+  position: relative;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 2;
+  height: 50px;
+  transition: all 200ms linear;
+  border-radius: 4px;
+  width: 240px;
+  letter-spacing: 1.5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+  border: none;
+  cursor: pointer;
+  background-color: #135527;
+  color: 'white';
+  box-shadow: 0 12px 35px 0 rgba(221, 18, 18, 0.25);
+  outline: 0;
+  text-transform: capitalize;
+}
+
+.form {
+  font-family: 'Ubuntu', sans-serif;
+  position: relative;
+  font-weight: 200;
+  font-size: 1rem;
+  line-height: 2;
+  height: 30px;
+  transition: all 200ms linear;
+  border-radius: 4px;
+  width: 240px;
+  letter-spacing: 1.5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  align-self: center;
+  border: none;
+  cursor: default;
+  box-shadow: 0 12px 35px 0 rgba(221, 18, 18, 0.25);
+  outline: 0;
+  text-transform: none;
 }
 
 @keyframes App-logo-spin {
