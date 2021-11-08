@@ -26,7 +26,7 @@ Nous ne vendons pas vos données personnelles aux annonceurs, elles seront uniqu
 Notre mission consiste à donner à tous la possibilité de célébrer Noël et de rapprocher le monde entier. Pour faire avancer cette mission, nous vous fournissons les services décrits ci-dessous :
 
 <p className="App-subsubtitle">Nous vous fournissons une expérience personnalisée :</p>
-votre expérience à Whoville ne ressemble à celle de personne d’autre. En effet vous recevrez un cadeau personnalisé, choisi spécialement pour vous par votre PN.
+Votre expérience à Whoville ne ressemble à celle de personne d’autre. En effet vous recevrez un cadeau personnalisé, choisi spécialement pour vous par votre PN.
 
 <p className="App-subsubtitle">Nous vous mettons en contact avec les personnes qui comptent pour vous :</p>
 Seules seront conviées des personnes avec lesquelles vous êtes, ou pourriez vouloir devenir ami(e). Les vraies communautés sont fondées sur des liens forts et nous pensons que la vie est plus belle lorsque les gens sont connectés aux personnes qui comptent pour eux.
@@ -60,7 +60,7 @@ Nous essayons de rendre Whoville largement accessible à tous, mais vous ne pouv
 
 <p className="App-subsubtitle">3.2 Ce que vous devez préparer avant votre venue</p>
 En vous inscrivant, vous vous engagez à être présent(e) le jour de la célébration, sauf circonstances exceptionnelles vous empêchant au dernier moment de vous y rendre. Vous vous engagez également à apporter :
-< br/>- un cadeau
+< br/>- un cadeau, d'une valeur maximum de 20 euros
 < br/>- de la nourriture et / ou boisson à partager
 < br/>
 < br/>En cas d’événement exceptionnel et imprévu vous empêchant de vous rendre au buffet, vous remettrez et recevrez votre cadeau un peu plus tard.  </p>

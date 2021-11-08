@@ -2,7 +2,6 @@ import "../App.css";
 import React, { useState } from "react";
 import Header from './Header';
 import Button from './Button';
-import Checkbox from './CheckBox';
   
 function Inscription({ done, itsDone, lecture, jeVeuxLire, text, participe, sayYes }) {
 
@@ -10,26 +9,31 @@ function Inscription({ done, itsDone, lecture, jeVeuxLire, text, participe, sayY
         name: "",
         email: "",
         lettre: "",
+        accept: false,
       })
-    const handleChange = e =>
+    const handleChange = e => {
         setData({ ...data, [e.target.name]: e.target.value })
+        disableButton(false)
+    }
     const validEmail = new RegExp('^[a-zA-Z0-9._:$!%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]$')
-    const [accept, Accept] = useState(false)
+    const [bdisabled, disableButton] = useState(false)
     const [messname, writeMN] = useState("")
     const [messemail, writeME] = useState("")
     const [messaccept, writeMA] = useState("")
 
     const checkSubmit = () => {
+        disableButton(true)
+        console.log(bdisabled)
         data.name === ""
             ? writeMN("Veuillez entrer un nom.")
             : writeMN("")
         data.email === "" || !(validEmail.test(data.email))
             ? writeME("Veuillez entrer une adresse e-mail valide.")
             : writeME("")
-        !accept
+        !data.accept
             ? writeMA("Veuillez accepter les conditions de participation.")
             : writeMA("")
-        let dataok = (data.name !== "" && (validEmail.test(data.email)) && accept) ? true : false;
+        let dataok = (data.name !== "" && (validEmail.test(data.email)) && data.accept) ? true : false;
         return dataok
     }
 
@@ -56,47 +60,56 @@ function Inscription({ done, itsDone, lecture, jeVeuxLire, text, participe, sayY
             dontgoback={participe}
             sayYes={sayYes}/>
         <div className="App-intro">
-                <p className="App-subtitle">Veuillez compléter le formulaire.</p>      
+            <p className="App-subtitle">Veuillez compléter le formulaire.</p>      
         
-                <form><br />
-            <div><label>Nom :<br />
-                <input
-                    className="form"
-                    type="text"
-                    name="name"
-                    value={data.name}
-                    onChange={handleChange}
-                />
-            </label></div>
-            <br />
-            <div><label>Email :<br />
-                <input
-                    className="form"
-                    type="text"
-                    name="email"
-                    value={data.email}
-                    onChange={handleChange} />
-            </label></div>
-            <br />
-            <div><label>As-tu un petit mot à faire passer au Père Noel ?<br />
-                <input
-                    className="form"
-                    type="text"
-                    name="lettre"
-                    value={data.lettre}
-                    onChange={handleChange}/>
-            </label></div>
-            <br />
+            <form>
+                <div className="form-item">
+                    <label>Nom :<br />
+                    <input
+                        className="form-input"
+                        type="text"
+                        name="name"
+                        value={data.name}
+                        onChange={handleChange}
+                    />
+                    </label>
+                </div>
+                <div className="form-item">
+                    <label>Email :<br />
+                    <input
+                        className="form-input"
+                        type="text"
+                        name="email"
+                        value={data.email}
+                        onChange={handleChange} />
+                    </label>
+                </div>
+                <div className="form-item">
+                    <label>As-tu un petit mot à faire passer au Père Noel ?<br />
+                    <input
+                        className="form-input"
+                        type="text"
+                        name="lettre"
+                        value={data.lettre}
+                        onChange={handleChange}/>
+                    </label>
+                </div>
+                <div className="form-item">
+                    <label>
+                    <input
+                        type="checkbox"
+                        name="accept"
+                        checked={data.accept}
+                        onChange={handleChange}
+                    />
+                    </label>
+                    J'ai lu et j'accepte les&nbsp; <button onClick={() => jeVeuxLire(true)}> conditions de participation</button>.
+                </div>
+            
             </form>
-
-            <br />
-            <Checkbox accept={accept} Accept ={Accept}/>
-            J'ai lu et j'accepte les&nbsp;
-            <button onClick={() => jeVeuxLire(true)}> 
-                conditions de participation
-            </button>.
+            
         </div>
-        <div className="App-greentxt">
+        <div className="App-whitetxt">
                 <p>{messname}</p>
                 <p>{messemail}</p>
                 <p>{messaccept}</p>
@@ -104,9 +117,8 @@ function Inscription({ done, itsDone, lecture, jeVeuxLire, text, participe, sayY
         <Button
             txt="Valider"
             onClick={handleSubmit}
+            disabled={bdisabled} disableButton={disableButton}
         />
-        <br />
-        <br />
         
     </>)
 }

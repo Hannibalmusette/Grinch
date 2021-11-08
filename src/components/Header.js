@@ -10,7 +10,7 @@ function Header({ dontgoback, sayYes, }) {
           onClick={() => sayYes(false)}
         >
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Site officiel de la mairie de Whoville</h1>
+          <h1>Site officiel de la mairie de Whoville</h1>
           
         </header>
       );
