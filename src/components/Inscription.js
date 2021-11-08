@@ -6,7 +6,7 @@ import Button from './Button';
 function Inscription({ done, itsDone, lecture, jeVeuxLire, text, participe, sayYes }) {
 
     const [data, setData] = useState({
-        name: "",
+        nom: "",
         email: "",
         lettre: "",
         accept: false,
@@ -24,7 +24,7 @@ function Inscription({ done, itsDone, lecture, jeVeuxLire, text, participe, sayY
     const checkSubmit = () => {
         disableButton(true)
         console.log(bdisabled)
-        data.name === ""
+        data.nom === ""
             ? writeMN("Veuillez entrer un nom.")
             : writeMN("")
         data.email === "" || !(validEmail.test(data.email))
@@ -33,7 +33,7 @@ function Inscription({ done, itsDone, lecture, jeVeuxLire, text, participe, sayY
         !data.accept
             ? writeMA("Veuillez accepter les conditions de participation.")
             : writeMA("")
-        let dataok = (data.name !== "" && (validEmail.test(data.email)) && data.accept) ? true : false;
+        let dataok = (data.nom !== "" && (validEmail.test(data.email)) && data.accept) ? true : false;
         return dataok
     }
 
@@ -45,7 +45,7 @@ function Inscription({ done, itsDone, lecture, jeVeuxLire, text, participe, sayY
             headers: {
               "Content-Type": "application/json",
             },
-            body: JSON.stringify([[data.name, data.email, data.lettre]]),
+            body: JSON.stringify([[data.nom, data.email, data.lettre]]),
           })
         } catch (err) {
           console.log(err)
@@ -69,7 +69,7 @@ function Inscription({ done, itsDone, lecture, jeVeuxLire, text, participe, sayY
                         className="form-input"
                         type="text"
                         name="name"
-                        value={data.name}
+                        value={data.nom}
                         onChange={handleChange}
                     />
                     </label>
