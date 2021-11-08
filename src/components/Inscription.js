@@ -68,7 +68,7 @@ function Inscription({ done, itsDone, lecture, jeVeuxLire, text, participe, sayY
                     <input
                         className="form-input"
                         type="text"
-                        name="name"
+                        name="nom"
                         value={data.nom}
                         onChange={handleChange}
                     />
@@ -100,8 +100,7 @@ function Inscription({ done, itsDone, lecture, jeVeuxLire, text, participe, sayY
                         type="checkbox"
                         name="accept"
                         checked={data.accept}
-                        onChange={handleChange}
-                    />
+                        onChange={handleChange}/>
                     </label>
                     J'ai lu et j'accepte les&nbsp; <button onClick={() => jeVeuxLire(true)}> conditions de participation</button>.
                 </div>
