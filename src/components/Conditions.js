@@ -41,7 +41,7 @@ Les personnes ne créeront une communauté à Whoville que si elles s’y senten
 Le formulaire rempli lors de votre inscription sera traité par un programme hautement complexe et sécurisé afin de transmettre toutes les informations nécessaires à votre PN.
 
 <p className="App-subtitle">2. Comment nos services sont financés</p>
-Au lieu de payer pour votre séjour à Whoville, vous acceptez que tous les frais ne soient pas supportés par la mairie : en vous inscrivant, vous vous envisagez à amener un cadeau, et à participer à l’approvisionnement du buffet.
+Au lieu de payer pour votre séjour à Whoville, vous acceptez que tous les frais ne soient pas supportés par la mairie : en vous inscrivant, vous vous engagez à amener un cadeau, et à participer à l’approvisionnement du buffet.
 
 <p className="App-subtitle">3. Vos engagements envers Whoville et sa communauté</p>
 Nous fournissons ces services à vous et à d’autres personnes pour faire progresser notre mission. En échange, nous avons besoin que vous preniez les engagements suivants : 
