@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Header from './Header';
 import Button from './Button';
   
+
 function Inscription({ done, itsDone, lecture, jeVeuxLire, text, participe, sayYes }) {
 
     const [data, setData] = useState({
