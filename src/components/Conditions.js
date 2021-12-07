@@ -52,7 +52,7 @@ Lorsque les personnes répondent de leur avis et de leurs actions, notre communa
 < br/>- fournir une adresse e-mail valide et à laquelle vous avez toujours accès
 < br/>- ne vous inscrire qu’une fois (vous n’aurez qu’un seul cadeau dans tous les cas !)
 < br/>- ne pas divulguer à qui vous devez offrir un cadeau, ou le cadeau que vous comptez offrir.
-
+< br/>< br/>
 Nous essayons de rendre Whoville largement accessible à tous, mais vous ne pouvez pas venir à Whoville si :
 < br/>- vous avez moins de 13 ans ;
 < br/>- vous êtes un délinquant sexuel condamné ;
